@@ -13,7 +13,7 @@ Database - SQL
 
 JS Library not covered in class - Leaflet _______
 
-Pull lat/lon data using an API (Census?) and merge with happiest city data for cities. 
+Pull lat/lon data using an API (Census?) and merge with happiest city data on cities. 
 
 Data for happiest cities from 2017-2020
 
