@@ -16,5 +16,15 @@ JS Library not covered in class - Leaflet _______
 Pull lat/lon data using an API (Census?) and merge with happiest city data on cities. 
 
 Data for happiest cities from 2017-2020
+2017 - https://web.archive.org/web/20170518200933/https://wallethub.com/edu/happiest-places-to-live/32619/
+2018 - https://web.archive.org/web/20180904140735/https://wallethub.com/edu/happiest-places-to-live/32619/
+2019 - https://web.archive.org/web/20190630142253/https://wallethub.com/edu/happiest-places-to-live/32619/
+2020 - https://wallethub.com/edu/happiest-places-to-live/32619/
+
+
+Notes:
+Data Cleanup - 
+Split City, State column in happiest city data to get only City
+Merge all happy city csvs with lat/lon data
 
 
