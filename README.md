@@ -8,6 +8,7 @@ Visualizations
 3. Plotly Candlestick Chart - Kevin
 
 HTML/CSS/Flask - Josh
+
 Database - SQL 
 
 JS Library not covered in class - Leaflet _______
