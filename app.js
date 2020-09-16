@@ -12,7 +12,7 @@ d3.csv(
             type: 'scattermapbox',
             mode: 'markers',
             text: rows.map(row=>{
-              return `City: ${row.City} <br> Score: ${row.Relative_Score}`
+              return `City: ${row.City} <br> Relative_Score: ${row.Relative_Score}`
             }),
             // text: unpack(rows, 'Total_Score'),
             lon: unpack(rows, 'Lng'),
@@ -36,7 +36,7 @@ d3.csv(
                 dtick: 0.1
               }
             },
-            name: 'Happiest City: Total_Score'
+            name: 'Happiest City: Relative_Score'
         }];
     
 
