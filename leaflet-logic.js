@@ -17,7 +17,7 @@ d3.csv("happy.2017.merged.csv").then(function(happyData) {
       L.circle(plotCircles, {
       fillOpacity: 0.75,
       color: "white",
-      fillColor: "blue",
+      fillColor: "#3AFBC1",
       // Adjust radius
       radius: happyData[i]['Overall Rank'] * 500
       }).bindPopup("<h2>City: " + happyData[i].City + ", " + happyData[i].State_id + "</h2> <br> <h2>Year: 2017 </h2><h2>Overall Rank: " + happyData[i]['Overall Rank'] + "</h2> <hr> <h3>Emotional & Physical Well-Being Rank: " + happyData[i]['Emotional & Physical Well-Being Rank'] + "</h3> <br> <h3>Income & Employment Rank: " + happyData[i]['Income & Employment Rank'] + "</h3> <br> <h3>Community & Environment Rank: " + happyData[i]['Community & Environment Rank'] + "</h3>")
@@ -38,7 +38,7 @@ d3.csv("happy.2018.merged.csv").then(function(happyData) {
       L.circle(plotCircles, {
       fillOpacity: 0.75,
       color: "white",
-      fillColor: "red",
+      fillColor: "#F1445B",
       // Adjust radius
       radius: happyData[i]['Overall Rank'] * 500
       }).bindPopup("<h2>City: " + happyData[i].City + ", " + happyData[i].State_id + "</h2> <br> <h2>Year: 2018 </h2><h2>Overall Rank: " + happyData[i]['Overall Rank'] + "</h2> <hr> <h3>Emotional & Physical Well-Being Rank: " + happyData[i]['Emotional & Physical Well-Being Rank'] + "</h3> <br> <h3>Income & Employment Rank: " + happyData[i]['Income & Employment Rank'] + "</h3> <br> <h3>Community & Environment Rank: " + happyData[i]['Community & Environment Rank'] + "</h3>")
@@ -59,7 +59,7 @@ d3.csv("happy.2019.merged.csv").then(function(happyData) {
       L.circle(plotCircles, {
       fillOpacity: 0.75,
       color: "white",
-      fillColor: "yellow",
+      fillColor: "#633DFE",
       // Adjust radius
       radius: happyData[i]['Overall Rank'] * 500
       }).bindPopup("<h2>City: " + happyData[i].City + ", " + happyData[i].State_id + "</h2> <br> <h2>Year: 2019 </h2><h2>Overall Rank: " + happyData[i]['Overall Rank'] + "</h2> <hr> <h3>Emotional & Physical Well-Being Rank: " + happyData[i]['Emotional & Physical Well-Being Rank'] + "</h3> <br> <h3>Income & Employment Rank: " + happyData[i]['Income & Employment Rank'] + "</h3> <br> <h3>Community & Environment Rank: " + happyData[i]['Community & Environment Rank'] + "</h3>")
@@ -80,7 +80,7 @@ d3.csv("happy.2020.merged.csv").then(function(happyData) {
       L.circle(plotCircles, {
       fillOpacity: 0.75,
       color: "white",
-      fillColor: "orange",
+      fillColor: "#FAA469",
       // Adjust radius
       radius: happyData[i]['Overall Rank'] * 500
       }).bindPopup("<h2>City: " + happyData[i].City + ", " + happyData[i].State_id + "</h2> <br> <h2>Year: 2020 </h2></h2> <br> <h2>Overall Rank: " + happyData[i]['Overall Rank'] + "</h2> <hr> <h3>Emotional & Physical Well-Being Rank: " + happyData[i]['Emotional & Physical Well-Being Rank'] + "</h3> <br> <h3>Income & Employment Rank: " + happyData[i]['Income & Employment Rank'] + "</h3> <br> <h3>Community & Environment Rank: " + happyData[i]['Community & Environment Rank'] + "</h3>")
@@ -132,7 +132,7 @@ var overlayMaps = {
 var myMap = L.map("map", {
   center: [37.09, -95.71],
   zoom: 4,
-  layers: [lightmap, year2017]
+  layers: [lightmap, year2020]
 });
 
 // Pass our map layers into our layer control
@@ -149,10 +149,10 @@ legend.onAdd = function (map) {
     var div = L.DomUtil.create('div', 'info legend');
 
     div.innerHTML += "<h4>Happiest US Cities";
-    div.innerHTML += '<i style="background: blue"></i><span>2017</span><br>';
-    div.innerHTML += '<i style="background: red"></i><span>2018</span><br>';
-    div.innerHTML += '<i style="background: yellow"></i><span>2019</span><br>';
-    div.innerHTML += '<i style="background: orange"></i><span>2020</span><br>';
+    div.innerHTML += '<i style="background: #3AFBC1 "></i><span>2017</span><br>';
+    div.innerHTML += '<i style="background: #F1445B"></i><span>2018</span><br>';
+    div.innerHTML += '<i style="background: #633DFE"></i><span>2019</span><br>';
+    div.innerHTML += '<i style="background: #FAA469"></i><span>2020</span><br>';
 
     return div;
 };
