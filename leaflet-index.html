@@ -1,27 +1,143 @@
 <!DOCTYPE html>
-<html lang="en">
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-  		<meta http-equiv="X-UA-Compatible" content="ie=edge">
-		<title>Leaflet Step-1</title>
-		<!-- Leaflet CSS -->
-		<link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
-		integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
-		crossorigin="" />
-		<link rel="stylesheet" type="text/css" href="leaflet-style.css">
-	</head>
-	<body>
-		<div id="map">
-		</div>
-		<!-- Leaflet JS -->
-		<script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
-		integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
-		crossorigin=""></script>
-		<!-- API key -->
-		<script type="text/javascript" src="leaflet-config.js"></script>
-		<script src="https://d3js.org/d3.v5.min.js"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/d3-tip/0.7.1/d3-tip.min.js"></script>
-		<script type="text/javascript" src="leaflet-logic.js"></script>
-  </body>
+<html lang="en-us">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>US Cities and their Happiness - Leaflet Map</title>
+
+    <!-- links to stylesheets -->
+	<!-- Leaflet CSS -->
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+	integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+	crossorigin="" />
+	<!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<!-- Styles CSS -->
+	<link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" src="dist/brand-buttons.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-social/5.1.1/bootstrap-social.min.css" integrity="sha512-f8mUMCRNrJxPBDzPJx3n+Y5TC5xp6SmStstEfgsDXZJTcxBakoB5hvPLhAfJKa9rCvH+n3xpJ2vQByxLk4WP2g==" crossorigin="anonymous" />
+    <script src="https://kit.fontawesome.com/ff5a97e55f.js" crossorigin="anonymous"></script>
+</head>
+
+<body style="background-color: white;text-align:center">
+  
+  <nav class="navbar navbar-expand-lg navbar-light bg-light; color: #FF4500">
+    <a class="navbar-brand" href="frontpagewh.html">Navbar</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="frontpagewh.html">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Visuals
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="#">Tanti's Portion</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">Kevin's Portion</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="leaflet-index.html">Matt's Portion</a>
+          </div>
+        </li>
+      </ul>
+
+    <div class="container">
+      <a class="blog-header-logo text-dark; text-align:center">Orange Group</a>
+    </div>
+
+      <ul class="nav navbar-nav navbar-right"></ul>
+        <span class="navbar-text">
+            Choose to study coding at WashU
+        </span>
+      </ul>
+    </div>
+  </nav>
+
+<!-- Beginning of Leaflet Map specific HTML -->
+
+<!-- Div for Leaflet Map -->
+<div id="map"></div>
+<!-- Leaflet JS -->
+<script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+crossorigin=""></script>
+<!-- Leaflet API key and sources -->
+<script type="text/javascript" src="leaflet-config.js"></script>
+<script src="https://d3js.org/d3.v5.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3-tip/0.7.1/d3-tip.min.js"></script>
+<script type="text/javascript" src="leaflet-logic.js"></script>
+
+<!-- End of Leaflet Map specific HTML -->
+
+
+
+    <!-- THUMBNAILS -->
+    <!-- <div class="row"> 
+      <div class="col-sm-4">
+        <a href="#" class="thumbnails">
+          <img src="https://img.bestplaces.net/images/city/0626000_CA_Fremont.png" alt="Fremont CA">
+        </a>
+        <h3>Happiest Cities</h3>
+        <p>Check this out to see the data for the happiest cities in the Unites States.</p>
+        <p><a href="https://wallethub.com/edu/happiest-places-to-live/32619/" class="btn btn-primary" role="button">Cities</a> </p>
+      </div>
+      <div class="col-sm-4">
+        <a href="#" class="thumbnails">
+          <img src="https://res.cloudinary.com/fen-learning/image/upload/c_limit,w_480,h_330/infopls_images/images/states_imgmap.gif" alt="States">
+        </a>
+        <h3>Happiest States</h3>
+        <p>Check this out to see the data for the happiest states in the Unites States.</p>
+        <p><a href="https://wallethub.com/edu/happiest-states/6959/" class="btn btn-primary" role="button">States</a></p>
+      </div>
+    </div> -->
+
+    <!-- Create new container with role main class container, div class is blog-post with date and link to data sites -->
+
+
+    <!-- CREATE ABOUT SECTION WITH WHO DID WHAT -->
+
+    <!-- Bread Crumb Each page -->
+    <!-- <ol class="breadcrumb">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Library</a></li>
+      <li class="active">Data</li>
+    </ol>
+    <ol class="breadcrumb">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Library</a></li>
+      <li class="active">Data</li>
+    </ol>
+    <ol class="breadcrumb">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Library</a></li>
+      <li class="active">Data</li>
+    </ol> -->
+    <!-- CREATE ELSEWHERE SECTION WITH LINK TO GITHUB MATERIALS -->
+
+  <footer class="footer">
+    <div class="container">
+      <span style="font-size: 48px">
+      <a href="https://github.com/md-aintright/project-2;" style="font-size: 48px; color: black">
+        <i class="fab fa-github"></i>
+      </a>
+      </span>
+    </div>
+  </footer>
+  
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+</body>
+
 </html>
+
+
