@@ -79,7 +79,7 @@ def get_datacandle():
 
     con = psycopg2.connect("host='localhost' dbname='happiness' user='postgres' password='Password'")  # Subsitute your dbname if different, and your password
     cur = con.cursor()
-    cur.execute("""select * from  happycandle""") # Substitute your table name if different from happycandle
+    cur.execute("""select * from  happycandle""")
     data = [col for col in cur]
     cur.close()
     print(jsonify(data))
@@ -92,7 +92,7 @@ def get_datascatter():
 
     con = psycopg2.connect("host='localhost' dbname='happiness' user='postgres' password='Password'")  # Subsitute your dbname if different, and your password
     cur = con.cursor()
-    cur.execute("""select * from  happyscatter""")   # Substitute your table name if different from happyscatter
+    cur.execute("""select * from  happyscatter""")
     data = [col for col in cur]
     cur.close()
     print(jsonify(data))
