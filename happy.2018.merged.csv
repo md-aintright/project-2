@@ -1,4 +1,4 @@
-Overall Rank,City,State_id,Lat,Lng,Emotional & Physical Well-Being Rank,Income & Employment Rank,Community & Environment Rank
+Overal_Rank,City,State_id,Lat,Lng,Emo_Rank,Income_Rank,Comm_Rank
 1,Fremont,CA,37.5265,-121.9852,3,6,1
 2,Bismarck,ND,46.81399999999999,-100.7695,4,1,7
 3,San Jose,CA,37.3021,-121.8489,1,8,27

@@ -1,5 +1,6 @@
 
   Plotly.d3.csv("Happiness.csv", function(err, rows){
+  //Plotly.d3.json("/data-candle", function(err, rows){  <---- How you will need to access data from SQL
     function unpack(rows, key) {
       return rows.map(function(row) { return row[key]; });
       }

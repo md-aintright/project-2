@@ -1,4 +1,4 @@
-Overall Rank,City,State_id,Lat,Lng,Emotional & Physical Well-Being Rank,Income & Employment Rank,Community & Environment Rank
+Overal_Rank,City,State_id,Lat,Lng,Emo_Rank,Income_Rank,Comm_Rank
 1,Fremont,CA,37.5265,-121.9852,4,28,5
 2,Plano,TX,33.0502,-96.7487,6,9,16
 3,San Jose,CA,37.3021,-121.8489,1,11,64
@@ -80,7 +80,7 @@ Overall Rank,City,State_id,Lat,Lng,Emotional & Physical Well-Being Rank,Income &
 79,Brownsville,TX,25.998,-97.4565,106,90,22
 80,Los Angeles,CA,34.1139,-118.4068,39,93,161
 81,Chesapeake,VA,36.6778,-76.3024,100,145,25
-81,Ontario,CA,34.0393,-117.6064,95,41,74
+82,Ontario,CA,34.0393,-117.6064,95,41,74
 83,Riverside,CA,33.9381,-117.3948,77,18,129
 84,Tallahassee,FL,30.4551,-84.2527,88,39,94
 85,Lewiston,ME,44.0915,-70.1681,148,4,63

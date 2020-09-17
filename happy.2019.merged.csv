@@ -1,4 +1,4 @@
-Overall Rank,City,State_id,Lat,Lng,Emotional & Physical Well-Being Rank,Income & Employment Rank,Community & Environment Rank
+Overal_Rank,City,State_id,Lat,Lng,Emo_Rank,Income_Rank,Comm_Rank
 1,Plano,TX,33.0502,-96.7487,7,6,8
 2,Irvine,CA,33.6772,-117.7738,14,11,5
 3,Madison,WI,43.0827,-89.3923,3,14,7
@@ -48,7 +48,7 @@ Overall Rank,City,State_id,Lat,Lng,Emotional & Physical Well-Being Rank,Income &
 47,Garland,TX,32.91,-96.6305,31,120,103
 48,Aurora,CO,39.7084,-104.7274,26,121,104
 49,El Paso,TX,31.8479,-106.4309,58,98,39
-49,Arlington,TX,32.6998,-97.1251,40,128,59
+50,Arlington,TX,32.6998,-97.1251,40,128,59
 51,Washington,DC,38.9047,-77.0163,9,40,167
 52,Charlotte,NC,35.2079,-80.8304,52,92,57
 53,Fort Lauderdale,FL,26.1412,-80.1464,59,60,92

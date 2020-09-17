@@ -5,12 +5,12 @@ var markers2019 = [];
 var markers2020 = [];
 
 // Import 2017 Data
-d3.csv("happy.2017.merged.csv").then(function(happyData) {
+d3.json("/data2017").then(function(happyData) {
+  console.log(happyData);
   // Loop through the data array and create one circle for each feature
   for (var i = 0; i < happyData.length; i++) {
-
     // Create variable to hold lat/lon coordinates for each feature
-    var plotCircles = [happyData[i].Lat, happyData[i].Lng];
+    var plotCircles = [happyData[i][3], happyData[i][4]];
         
     // Store circles
     markers2017.push(
@@ -19,19 +19,20 @@ d3.csv("happy.2017.merged.csv").then(function(happyData) {
       color: "white",
       fillColor: "#3AFBC1",
       // Adjust radius
-      radius: happyData[i]['Overall Rank'] * 500
-      }).bindPopup("<h2>City: " + happyData[i].City + ", " + happyData[i].State_id + "</h2> <br> <h2>Year: 2017 </h2><h2>Overall Rank: " + happyData[i]['Overall Rank'] + "</h2> <hr> <h3>Emotional & Physical Well-Being Rank: " + happyData[i]['Emotional & Physical Well-Being Rank'] + "</h3> <br> <h3>Income & Employment Rank: " + happyData[i]['Income & Employment Rank'] + "</h3> <br> <h3>Community & Environment Rank: " + happyData[i]['Community & Environment Rank'] + "</h3>")
+      radius: happyData[i][0] * 500
+      }).bindPopup("<h2>City: " + happyData[i][1] + ", " + happyData[i][2] + "</h2> <br> <h2>Year: 2017 </h2><h2>Overall Rank: " + happyData[i][1] + "</h2> <hr> <h3>Emotional & Physical Well-Being Rank: " + happyData[i][5] + "</h3> <br> <h3>Income & Employment Rank: " + happyData[i][6] + "</h3> <br> <h3>Community & Environment Rank: " + happyData[i][7] + "</h3>")
       );
   
   }
 
 // Import 2018 Data
-d3.csv("happy.2018.merged.csv").then(function(happyData) {
+d3.json("/data2018").then(function(happyData) {
+  console.log(happyData);
   // Loop through the data array and create one circle for each feature
   for (var i = 0; i < happyData.length; i++) {
 
     // Create variable to hold lat/lon coordinates for each feature
-    var plotCircles = [happyData[i].Lat, happyData[i].Lng];
+    var plotCircles = [happyData[i][3], happyData[i][4]];
         
     // Store circles
     markers2018.push(
@@ -40,19 +41,20 @@ d3.csv("happy.2018.merged.csv").then(function(happyData) {
       color: "white",
       fillColor: "#F1445B",
       // Adjust radius
-      radius: happyData[i]['Overall Rank'] * 500
-      }).bindPopup("<h2>City: " + happyData[i].City + ", " + happyData[i].State_id + "</h2> <br> <h2>Year: 2018 </h2><h2>Overall Rank: " + happyData[i]['Overall Rank'] + "</h2> <hr> <h3>Emotional & Physical Well-Being Rank: " + happyData[i]['Emotional & Physical Well-Being Rank'] + "</h3> <br> <h3>Income & Employment Rank: " + happyData[i]['Income & Employment Rank'] + "</h3> <br> <h3>Community & Environment Rank: " + happyData[i]['Community & Environment Rank'] + "</h3>")
-    );
+      radius: happyData[i][0] * 500
+      }).bindPopup("<h2>City: " + happyData[i][1] + ", " + happyData[i][2] + "</h2> <br> <h2>Year: 2018 </h2><h2>Overall Rank: " + happyData[i][1] + "</h2> <hr> <h3>Emotional & Physical Well-Being Rank: " + happyData[i][5] + "</h3> <br> <h3>Income & Employment Rank: " + happyData[i][6] + "</h3> <br> <h3>Community & Environment Rank: " + happyData[i][7] + "</h3>")
+      );
   
   }
 
 // Import 2019 Data
-d3.csv("happy.2019.merged.csv").then(function(happyData) {
+d3.json("/data2019").then(function(happyData) {
+  console.log(happyData);
   // Loop through the data array and create one circle for each feature
   for (var i = 0; i < happyData.length; i++) {
 
     // Create variable to hold lat/lon coordinates for each feature
-    var plotCircles = [happyData[i].Lat, happyData[i].Lng];
+    var plotCircles = [happyData[i][3], happyData[i][4]];
         
     // Store circles
     markers2019.push(
@@ -61,19 +63,19 @@ d3.csv("happy.2019.merged.csv").then(function(happyData) {
       color: "white",
       fillColor: "#633DFE",
       // Adjust radius
-      radius: happyData[i]['Overall Rank'] * 500
-      }).bindPopup("<h2>City: " + happyData[i].City + ", " + happyData[i].State_id + "</h2> <br> <h2>Year: 2019 </h2><h2>Overall Rank: " + happyData[i]['Overall Rank'] + "</h2> <hr> <h3>Emotional & Physical Well-Being Rank: " + happyData[i]['Emotional & Physical Well-Being Rank'] + "</h3> <br> <h3>Income & Employment Rank: " + happyData[i]['Income & Employment Rank'] + "</h3> <br> <h3>Community & Environment Rank: " + happyData[i]['Community & Environment Rank'] + "</h3>")
-    );
+      radius: happyData[i][0] * 500
+      }).bindPopup("<h2>City: " + happyData[i][1] + ", " + happyData[i][2] + "</h2> <br> <h2>Year: 2019 </h2><h2>Overall Rank: " + happyData[i][1] + "</h2> <hr> <h3>Emotional & Physical Well-Being Rank: " + happyData[i][5] + "</h3> <br> <h3>Income & Employment Rank: " + happyData[i][6] + "</h3> <br> <h3>Community & Environment Rank: " + happyData[i][7] + "</h3>")
+      );
   
   }
 
 // Import 2020 Data
-d3.csv("happy.2020.merged.csv").then(function(happyData) {
+d3.json("/data2020").then(function(happyData) {
   // Loop through the data array and create one circle for each feature
   for (var i = 0; i < happyData.length; i++) {
 
     // Create variable to hold lat/lon coordinates for each feature
-    var plotCircles = [happyData[i].Lat, happyData[i].Lng];
+    var plotCircles = [happyData[i][3], happyData[i][4]];
         
     // Store circles
     markers2020.push(
@@ -82,12 +84,11 @@ d3.csv("happy.2020.merged.csv").then(function(happyData) {
       color: "white",
       fillColor: "#FAA469",
       // Adjust radius
-      radius: happyData[i]['Overall Rank'] * 500
-      }).bindPopup("<h2>City: " + happyData[i].City + ", " + happyData[i].State_id + "</h2> <br> <h2>Year: 2020 </h2></h2> <br> <h2>Overall Rank: " + happyData[i]['Overall Rank'] + "</h2> <hr> <h3>Emotional & Physical Well-Being Rank: " + happyData[i]['Emotional & Physical Well-Being Rank'] + "</h3> <br> <h3>Income & Employment Rank: " + happyData[i]['Income & Employment Rank'] + "</h3> <br> <h3>Community & Environment Rank: " + happyData[i]['Community & Environment Rank'] + "</h3>")
-    );
+      radius: happyData[i][0] * 500
+      }).bindPopup("<h2>City: " + happyData[i][1] + ", " + happyData[i][2] + "</h2> <br> <h2>Year: 2020 </h2><h2>Overall Rank: " + happyData[i][1] + "</h2> <hr> <h3>Emotional & Physical Well-Being Rank: " + happyData[i][5] + "</h3> <br> <h3>Income & Employment Rank: " + happyData[i][6] + "</h3> <br> <h3>Community & Environment Rank: " + happyData[i][7] + "</h3>")
+      );
   
   }
-
 
 // Create base layers
 

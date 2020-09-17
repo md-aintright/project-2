@@ -8,7 +8,7 @@
     <!-- links to stylesheets -->
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/styles.css') }}">
     <link rel="stylesheet" src="dist/brand-buttons.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-social/5.1.1/bootstrap-social.min.css" integrity="sha512-f8mUMCRNrJxPBDzPJx3n+Y5TC5xp6SmStstEfgsDXZJTcxBakoB5hvPLhAfJKa9rCvH+n3xpJ2vQByxLk4WP2g==" crossorigin="anonymous" />
@@ -18,7 +18,7 @@
 <body style="background-color: white;text-align:center">
   
   <nav class="navbar navbar-expand-lg navbar-light bg-light; color: #FF4500">
-    <a class="navbar-brand" href="frontpagewh.html">Navbar</a>
+    <a class="navbar-brand" href="/">Navbar</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -26,18 +26,18 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
         <li class="nav-item active">
-          <a class="nav-link" href="frontpagewh.html">Home <span class="sr-only">(current)</span></a>
+          <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             Visuals
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="scatter-index.html">Tanti's Portion</a>
+            <a class="dropdown-item" href="/scatter">Tanti's Portion</a>
             <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="table-subplots-index.html">Kevin's Portion</a>
+            <a class="dropdown-item" href="/candle">Kevin's Portion</a>
             <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="leaflet-index.html">Matt's Portion</a>
+            <a class="dropdown-item" href="/leaflet">Matt's Portion</a>
           </div>
         </li>
       </ul>
