@@ -1,3 +1,4 @@
+// d3.json("/data-scatter").then (           <---  you will need to use this instead to access table from sql db. 
 d3.csv(
 	"out3.csv").then (
 	function(rows) {
