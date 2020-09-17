@@ -20,6 +20,10 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-social/5.1.1/bootstrap-social.min.css" integrity="sha512-f8mUMCRNrJxPBDzPJx3n+Y5TC5xp6SmStstEfgsDXZJTcxBakoB5hvPLhAfJKa9rCvH+n3xpJ2vQByxLk4WP2g==" crossorigin="anonymous" />
     <script src="https://kit.fontawesome.com/ff5a97e55f.js" crossorigin="anonymous"></script>
+    <!-- D3 Scatterplot sources -->
+    <!-- Load plotly.js into the DOM -->
+    <script src='https://cdn.plot.ly/plotly-latest.min.js'></script>
+    <script src="https://d3js.org/d3.v6.min.js"></script>
 </head>
 
 <body style="background-color: white;text-align:center">
@@ -61,21 +65,12 @@
     </div>
   </nav>
 
-<!-- Beginning of Leaflet Map specific HTML -->
+<!-- Beginning of D3 Scatterplot specific HTML -->
 
-<!-- Div for Leaflet Map -->
-<div id="map"></div>
-<!-- Leaflet JS -->
-<script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
-integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
-crossorigin=""></script>
-<!-- Leaflet API key and sources -->
-<script type="text/javascript" src="leaflet-config.js"></script>
-<script src="https://d3js.org/d3.v5.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/d3-tip/0.7.1/d3-tip.min.js"></script>
-<script type="text/javascript" src="leaflet-logic.js"></script>
+<div id='myDiv'><!-- Plotly chart will be drawn inside this DIV --></div>
+<script type="text/javascript" src="app.js"></script>
 
-<!-- End of Leaflet Map specific HTML -->
+<!-- End of D3 Scatterplot specific HTML -->
 
 
 
@@ -139,5 +134,3 @@ crossorigin=""></script>
 </body>
 
 </html>
-
-
