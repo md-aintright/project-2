@@ -1,22 +1,46 @@
-
-  Plotly.d3.csv("Happiness.csv", function(err, rows){
-  //Plotly.d3.json("/data-candle", function(err, rows){  <---- How you will need to access data from SQL
-    function unpack(rows, key) {
-      return rows.map(function(row) { return row[key]; });
-      }
+//Plotly.d3.csv("Happiness.csv", function(err, rows){
+  Plotly.d3.json("/data-candle", function(err, rows){
+    //function unpack(rows, key) {
+    //  return rows.map(function(row) { return row[key]; });
+    //  }
 
       // header values
-      var headerNames = Plotly.d3.keys(rows[0]);
-      var headerValues = [headerNames[1],headerNames[2],headerNames[3],
-                          headerNames[4], headerNames[5],headerNames[6]];
+      //var headerNames = Plotly.d3.keys(rows[0]);
+      var headerValues = ["Year","City","State","EPRank","IERank","CERank"];
+      //var headerValues = [headerNames[1],headerNames[2],headerNames[3],
+      //                    headerNames[4], headerNames[5],headerNames[6]];
+      //console.log(headerNames);
+      //console.log(headerValues);
     
       // cell values
-      var cellValues = [];
-      for (i = 0; i < headerValues.length; i++) {
-        cellValue = unpack(rows, headerValues[i]);
-        cellValues[i] = cellValue;
+      var cellArray = [];
+      var YearValues = [];
+      var CityValues = [];
+      var StateValues = [];
+      var EPValues = [];
+      var IEValues = [];
+      var CEValues = [];
+
+      for (i = 0; i < rows.length; i++) {
+      //for (i = 0; i < headerValues.length; i++) {
+        //cellValue = unpack(rows, headerValues[i]);
+        //console.log(cellValue);
+        //cellValues[i] = cellValue;
+        YearValues[i] = rows[i][1];
+        CityValues[i] = rows[i][2];
+        StateValues[i] = rows[i][3];
+        EPValues[i] = rows[i][4];
+        IEValues[i] = rows[i][5];
+        CEValues[i] = rows[i][6];
+        //console.log(cellValues);
       }
-      console.log(cellValues);
+      cellArray[0] = YearValues;
+      cellArray[1] = CityValues;
+      cellArray[2] = StateValues;
+      cellArray[3] = EPValues;
+      cellArray[4] = IEValues;
+      cellArray[5] = CEValues;
+      console.log(cellArray);
 
       // create table
       var table = {
@@ -31,7 +55,7 @@
           font: {family: "Arial", size: 12, color: "white"}
         },
         cells: {
-          values: cellValues,
+          values: cellArray,
           align: ["center", "center"],
           line: {color: "black", width: 1},
           fill: {color: ['rgb(220, 183, 288)', 'rgba(208, 202, 209, 0.65)']},
@@ -41,11 +65,14 @@
         yaxis: 'y',
         domain: {x: [0,0.4], y: [0,1]}
       }
+
     
       // create 1st plot
       var trace1 = {
-        x: unpack(rows, 'Year'),
-        y: unpack(rows, 'EPRank'),
+        x: YearValues,
+        y: EPValues,
+        //x: unpack(rows, 'Year'),
+        //y: unpack(rows, 'EPRank'),
         xaxis: 'x1',
         yaxis: 'y1',
         mode: 'lines',
@@ -54,8 +81,10 @@
       }
       // create 2nd plot
       var trace2 = {
-        x: unpack(rows, 'Year'),
-        y: unpack(rows, 'IERank'),
+        x: YearValues,
+        y: IEValues,
+        //x: unpack(rows, 'Year'),
+        //y: unpack(rows, 'IERank'),
         xaxis: 'x2',
         yaxis: 'y2',
         mode: 'lines',
@@ -65,8 +94,10 @@
     
       // create 3rd plot
       var trace3 = {
-        x: unpack(rows, 'Year'),
-        y: unpack(rows, 'CERank'),
+        x: YearValues,
+        y: CEValues,
+        //x: unpack(rows, 'Year'),
+        //y: unpack(rows, 'CERank'),
         xaxis: 'x3',
         yaxis: 'y3',
         mode: 'lines',
