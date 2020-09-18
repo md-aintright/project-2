@@ -3,17 +3,16 @@
 Create interactive visualiations for the happiest cities in the US comparing a variety of factors such as income, environment, community, physical and emotional well being, etc.
 
 Visualizations
-1. Leaflet Markers/Heatmap - Matt
-2. Scatterplot similar to d3 homework - Tanti
-3. Plotly Candlestick Chart - Kevin
+1. Leaflet Map - Matt
+2. Scattermapbox - Tanti
+3. Plotly Table-subplots Chart - Kevin
+4. C3 Chart - Kevin
 
 HTML/CSS/Flask - Josh
 
 Database - SQL 
 
-JS Library not covered in class - Leaflet _______ (leaflet-custom-searchbox is planned at the moment)
-
-Pull lat/lon data using an API (Census?) and merge with happiest city data on cities. 
+JS Library not covered in class - C3
 
 Data for happiest cities from 2017-2020
 2017 - https://web.archive.org/web/20170518200933/https://wallethub.com/edu/happiest-places-to-live/32619/
