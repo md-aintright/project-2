@@ -32,7 +32,7 @@ def scatter():
 @app.route("/data2017")
 def get_data2017():
 
-    con = psycopg2.connect("host='localhost' dbname='happiness' user='postgres' password='Password'") 
+    con = psycopg2.connect("host='localhost' dbname='happiness' user='postgres' password='Ru5tC@hle'") 
     cur = con.cursor()
     cur.execute("""select * from  happy2017""") 
     data = [col for col in cur]
@@ -43,7 +43,7 @@ def get_data2017():
 @app.route("/data2018")
 def get_data2018():
 
-    con = psycopg2.connect("host='localhost' dbname='happiness' user='postgres' password='Password'")  
+    con = psycopg2.connect("host='localhost' dbname='happiness' user='postgres' password='Ru5tC@hle'")  
     cur = con.cursor()
     cur.execute("""select * from  happy2018""")
     data = [col for col in cur]
@@ -54,7 +54,7 @@ def get_data2018():
 @app.route("/data2019")
 def get_data2019():
 
-    con = psycopg2.connect("host='localhost' dbname='happiness' user='postgres' password='Password'")  
+    con = psycopg2.connect("host='localhost' dbname='happiness' user='postgres' password='Ru5tC@hle'")  
     cur = con.cursor()
     cur.execute("""select * from  happy2019""")
     data = [col for col in cur]
@@ -65,7 +65,7 @@ def get_data2019():
 @app.route("/data2020")
 def get_data2020():
 
-    con = psycopg2.connect("host='localhost' dbname='happiness' user='postgres' password='Password'")  
+    con = psycopg2.connect("host='localhost' dbname='happiness' user='postgres' password='Ru5tC@hle'")  
     cur = con.cursor()
     cur.execute("""select * from  happy2020""")
     data = [col for col in cur]
@@ -77,7 +77,7 @@ def get_data2020():
 @app.route("/data-candle")
 def get_datacandle():
 
-    con = psycopg2.connect("host='localhost' dbname='happiness' user='postgres' password='Password'")  # Subsitute your dbname if different, and your password
+    con = psycopg2.connect("host='localhost' dbname='happiness' user='postgres' password='Ru5tC@hle'")  # Subsitute your dbname if different, and your password
     cur = con.cursor()
     cur.execute("""select * from  happycandle""")
     data = [col for col in cur]
@@ -90,7 +90,7 @@ def get_datacandle():
 @app.route("/data-scatter")
 def get_datascatter():
 
-    con = psycopg2.connect("host='localhost' dbname='happiness' user='postgres' password='Password'")  # Subsitute your dbname if different, and your password
+    con = psycopg2.connect("host='localhost' dbname='happiness' user='postgres' password='Ru5tC@hle'")  # Subsitute your dbname if different, and your password
     cur = con.cursor()
     cur.execute("""select * from  happyscatter""")
     data = [col for col in cur]
