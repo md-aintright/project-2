@@ -1,20 +1,141 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-us">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <!-- Load c3.css -->
-  <link href="c3.css" rel="stylesheet">
-  <!-- Load d3.js and c3.js -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/c3/0.7.20/c3.min.js"></script>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>US Cities and their Happiness - C3 Chart</title>
+
+    <!-- links to stylesheets -->
+	<!-- Leaflet CSS -->
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+	integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+	crossorigin="" />
+	<!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<!-- Styles CSS -->
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/styles.css') }}">
+    <link rel="stylesheet" src="dist/brand-buttons.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-social/5.1.1/bootstrap-social.min.css" integrity="sha512-f8mUMCRNrJxPBDzPJx3n+Y5TC5xp6SmStstEfgsDXZJTcxBakoB5hvPLhAfJKa9rCvH+n3xpJ2vQByxLk4WP2g==" crossorigin="anonymous" />
+    <script src="https://kit.fontawesome.com/ff5a97e55f.js" crossorigin="anonymous"></script>
+    <!-- D3 Scatterplot sources -->
+    <!-- Load plotly.js into the DOM -->
+    <script src='https://cdn.plot.ly/plotly-latest.min.js'></script>
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/c3/0.7.20/c3.min.js"></script>
 </head>
 
-<body>
-  <div id="chart"></div>
-  <script src="C3.js"></script>
+<body style="background-color: white;text-align:center">
+  
+  <nav class="navbar navbar-expand-lg navbar-light bg-light; color: #FF4500">
+    <a class="navbar-brand" href="/">Navbar</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Visuals
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="/scatter">Scattermapbox</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="/candle">Table-Subplots</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="/leaflet">Leaflet Map</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="/c3">C3 Chart</a>
+          </div>
+        </li>
+      </ul>
+
+    <div class="container">
+      <a class="blog-header-logo text-dark; text-align:center">Orange Group</a>
+    </div>
+
+      <ul class="nav navbar-nav navbar-right"></ul>
+        <span class="navbar-text">
+            Choose to study coding at WashU
+        </span>
+      </ul>
+    </div>
+  </nav>
+
+<!-- Beginning of D3 Scatterplot specific HTML -->
+
+<div id="chart"></div>
+<script src="{{ url_for('static',filename='C3.js') }}"></script>
+
+<!-- End of D3 Scatterplot specific HTML -->
+
+
+
+    <!-- THUMBNAILS -->
+    <!-- <div class="row"> 
+      <div class="col-sm-4">
+        <a href="#" class="thumbnails">
+          <img src="https://img.bestplaces.net/images/city/0626000_CA_Fremont.png" alt="Fremont CA">
+        </a>
+        <h3>Happiest Cities</h3>
+        <p>Check this out to see the data for the happiest cities in the Unites States.</p>
+        <p><a href="https://wallethub.com/edu/happiest-places-to-live/32619/" class="btn btn-primary" role="button">Cities</a> </p>
+      </div>
+      <div class="col-sm-4">
+        <a href="#" class="thumbnails">
+          <img src="https://res.cloudinary.com/fen-learning/image/upload/c_limit,w_480,h_330/infopls_images/images/states_imgmap.gif" alt="States">
+        </a>
+        <h3>Happiest States</h3>
+        <p>Check this out to see the data for the happiest states in the Unites States.</p>
+        <p><a href="https://wallethub.com/edu/happiest-states/6959/" class="btn btn-primary" role="button">States</a></p>
+      </div>
+    </div> -->
+
+    <!-- Create new container with role main class container, div class is blog-post with date and link to data sites -->
+
+
+    <!-- CREATE ABOUT SECTION WITH WHO DID WHAT -->
+
+    <!-- Bread Crumb Each page -->
+    <!-- <ol class="breadcrumb">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Library</a></li>
+      <li class="active">Data</li>
+    </ol>
+    <ol class="breadcrumb">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Library</a></li>
+      <li class="active">Data</li>
+    </ol>
+    <ol class="breadcrumb">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Library</a></li>
+      <li class="active">Data</li>
+    </ol> -->
+    <!-- CREATE ELSEWHERE SECTION WITH LINK TO GITHUB MATERIALS -->
+
+  <footer class="footer">
+    <div class="container">
+      <span style="font-size: 48px">
+      <a href="https://github.com/md-aintright/project-2;" style="font-size: 48px; color: black">
+        <i class="fab fa-github"></i>
+      </a>
+      </span>
+    </div>
+  </footer>
+  
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
 </body>
 
 </html>
+

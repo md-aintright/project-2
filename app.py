@@ -27,6 +27,12 @@ def scatter():
 
     return render_template("scatter-index.html")
 
+# Route to render C3-index.html template
+@app.route("/c3")
+def c3():
+
+    return render_template("C3-index.html")
+
 
 # Route that will trigger the DB query function
 @app.route("/data2017")
