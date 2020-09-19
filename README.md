@@ -15,10 +15,14 @@ Database - SQL
 JS Library not covered in class - C3
 
 Data for happiest cities from 2017-2020
-2017 - https://web.archive.org/web/20170518200933/https://wallethub.com/edu/happiest-places-to-live/32619/
-2018 - https://web.archive.org/web/20180904140735/https://wallethub.com/edu/happiest-places-to-live/32619/
-2019 - https://web.archive.org/web/20190630142253/https://wallethub.com/edu/happiest-places-to-live/32619/
-2020 - https://wallethub.com/edu/happiest-places-to-live/32619/
+2017
+https://web.archive.org/web/20170518200933/https://wallethub.com/edu/happiest-places-to-live/32619/
+2018
+https://web.archive.org/web/20180904140735/https://wallethub.com/edu/happiest-places-to-live/32619/
+2019
+https://web.archive.org/web/20190630142253/https://wallethub.com/edu/happiest-places-to-live/32619/
+2020
+https://wallethub.com/edu/happiest-places-to-live/32619/
 
 Data for Lat/Long of cities
 https://simplemaps.com/data/us-cities
