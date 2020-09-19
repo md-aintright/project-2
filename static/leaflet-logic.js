@@ -20,7 +20,7 @@ d3.json("/data2017").then(function(happyData) {
       fillColor: "#3AFBC1",
       // Adjust radius
       radius: happyData[i][0] * 500
-      }).bindPopup("<h2>City: " + happyData[i][1] + ", " + happyData[i][2] + "</h2> <br> <h2>Year: 2017 </h2><h2>Overall Rank: " + happyData[i][1] + "</h2> <hr> <h3>Emotional & Physical Well-Being Rank: " + happyData[i][5] + "</h3> <br> <h3>Income & Employment Rank: " + happyData[i][6] + "</h3> <br> <h3>Community & Environment Rank: " + happyData[i][7] + "</h3>")
+      }).bindPopup("<h2>City: " + happyData[i][1] + ", " + happyData[i][2] + "</h2> <br> <h2>Year: 2017 </h2><h2>Overall Rank: " + happyData[i][0] + "</h2> <hr> <h3>Emotional & Physical Well-Being Rank: " + happyData[i][5] + "</h3> <br> <h3>Income & Employment Rank: " + happyData[i][6] + "</h3> <br> <h3>Community & Environment Rank: " + happyData[i][7] + "</h3>")
       );
   
   }
@@ -42,7 +42,7 @@ d3.json("/data2018").then(function(happyData) {
       fillColor: "#F1445B",
       // Adjust radius
       radius: happyData[i][0] * 500
-      }).bindPopup("<h2>City: " + happyData[i][1] + ", " + happyData[i][2] + "</h2> <br> <h2>Year: 2018 </h2><h2>Overall Rank: " + happyData[i][1] + "</h2> <hr> <h3>Emotional & Physical Well-Being Rank: " + happyData[i][5] + "</h3> <br> <h3>Income & Employment Rank: " + happyData[i][6] + "</h3> <br> <h3>Community & Environment Rank: " + happyData[i][7] + "</h3>")
+      }).bindPopup("<h2>City: " + happyData[i][1] + ", " + happyData[i][2] + "</h2> <br> <h2>Year: 2018 </h2><h2>Overall Rank: " + happyData[i][0] + "</h2> <hr> <h3>Emotional & Physical Well-Being Rank: " + happyData[i][5] + "</h3> <br> <h3>Income & Employment Rank: " + happyData[i][6] + "</h3> <br> <h3>Community & Environment Rank: " + happyData[i][7] + "</h3>")
       );
   
   }
@@ -64,7 +64,7 @@ d3.json("/data2019").then(function(happyData) {
       fillColor: "#633DFE",
       // Adjust radius
       radius: happyData[i][0] * 500
-      }).bindPopup("<h2>City: " + happyData[i][1] + ", " + happyData[i][2] + "</h2> <br> <h2>Year: 2019 </h2><h2>Overall Rank: " + happyData[i][1] + "</h2> <hr> <h3>Emotional & Physical Well-Being Rank: " + happyData[i][5] + "</h3> <br> <h3>Income & Employment Rank: " + happyData[i][6] + "</h3> <br> <h3>Community & Environment Rank: " + happyData[i][7] + "</h3>")
+      }).bindPopup("<h2>City: " + happyData[i][1] + ", " + happyData[i][2] + "</h2> <br> <h2>Year: 2019 </h2><h2>Overall Rank: " + happyData[i][0] + "</h2> <hr> <h3>Emotional & Physical Well-Being Rank: " + happyData[i][5] + "</h3> <br> <h3>Income & Employment Rank: " + happyData[i][6] + "</h3> <br> <h3>Community & Environment Rank: " + happyData[i][7] + "</h3>")
       );
   
   }
@@ -85,7 +85,7 @@ d3.json("/data2020").then(function(happyData) {
       fillColor: "#FAA469",
       // Adjust radius
       radius: happyData[i][0] * 500
-      }).bindPopup("<h2>City: " + happyData[i][1] + ", " + happyData[i][2] + "</h2> <br> <h2>Year: 2020 </h2><h2>Overall Rank: " + happyData[i][1] + "</h2> <hr> <h3>Emotional & Physical Well-Being Rank: " + happyData[i][5] + "</h3> <br> <h3>Income & Employment Rank: " + happyData[i][6] + "</h3> <br> <h3>Community & Environment Rank: " + happyData[i][7] + "</h3>")
+      }).bindPopup("<h2>City: " + happyData[i][1] + ", " + happyData[i][2] + "</h2> <br> <h2>Year: 2020 </h2><h2>Overall Rank: " + happyData[i][0] + "</h2> <hr> <h3>Emotional & Physical Well-Being Rank: " + happyData[i][5] + "</h3> <br> <h3>Income & Employment Rank: " + happyData[i][6] + "</h3> <br> <h3>Community & Environment Rank: " + happyData[i][7] + "</h3>")
       );
   
   }
